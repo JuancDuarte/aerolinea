@@ -160,14 +160,6 @@ public class GestorAeropuerto {
         return numPistas;
     }
  
-    /**
-     * SOLO PARA DEMOSTRACIÓN (ver com.aeropuerto.demo.DemostracionDeadlock).
-     * Entrega el semáforo binario real de una pista para que la demo pueda
-     * tomarlo directamente, IGNORANDO a propósito el orden global seguro
-     * (puerta -> pista) que sí respetan aterrizar()/despegar(). Así se
-     * puede provocar un interbloqueo real y verificar que existe, antes
-     * de mostrar por qué el orden global lo evita en el resto del sistema.
-     */
     public Semaphore semaforoPistaCrudo(int idPista) {
         return semaforosPista[idPista];
     }

@@ -48,8 +48,6 @@ public class Avion implements Runnable {
  
             registro.log(nombre + " completó su operación en el aeropuerto.");
         } catch (InterruptedException e) {
-            // Buena práctica al capturar InterruptedException: restaurar el
-            // estado de interrupción del hilo en vez de tragarse el error.
             Thread.currentThread().interrupt();
             registro.log(nombre + " fue interrumpido y no completó su operación.");
         }
